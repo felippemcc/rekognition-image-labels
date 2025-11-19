@@ -409,10 +409,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📸 Screenshots
 
 ### Interface Principal
-![Interface de Upload](https://via.placeholder.com/800x400?text=Upload+Interface)
+![Interface de Upload](C:\Users\felip\Documents\projetos\rekognition-image-labels\assets\images\capa.png)
 
 ### Resultados da Análise
-![Resultados](https://via.placeholder.com/800x400?text=Analysis+Results)
+![Resultados](assets/images/cafe_teste.png)
 
 ---
 
