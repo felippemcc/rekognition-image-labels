@@ -2,7 +2,8 @@
 // IMPORTANTE: Ajuste esta URL de acordo com seu backend
 
 // const API_URL = 'http://localhost:5000'; // ou 'http://127.0.0.1:5000'
-const API_URL = 'https://rekognition-img.up.railway.app'; // ou 'http://127.0.0.1:5000'
+//const API_URL = 'https://rekognition-img.up.railway.app'; // ou 'http://127.0.0.1:5000'
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000'
 
 // Elementos do DOM
 const uploadArea = document.getElementById('uploadArea');
