@@ -395,7 +395,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - 🌐 GitHub: [@felippemcc](https://github.com/felippemcc)
 - 💼 LinkedIn: [Felippe Moura](https://www.linkedin.com/in/felippemoura/)
-- 📧 Email: [Adicione seu email aqui]
+- 📧 Email: [felippe.mcc1@gmail.com]
 
 ---
 
@@ -409,7 +409,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📸 Screenshots
 
 ### Interface Principal
-![Interface de Upload](C:\Users\felip\Documents\projetos\rekognition-image-labels\assets\images\capa.png)
+![Interface de Upload](assets/images/capa.png)
 
 ### Resultados da Análise
 ![Resultados](assets/images/cafe_teste.png)
