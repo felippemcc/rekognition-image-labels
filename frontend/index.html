@@ -3,32 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Labels Generator - AWS Rekognition</title>
+    <title>AWS Rekognition - Análise de Imagens</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <!-- Header content será adicionado aqui -->
-    </header>
+    <div class="container">
+        <header>
+            <h1>🖼️ Análise de Imagens com AWS Rekognition</h1>
+            <p class="subtitle">Identifique automaticamente objetos, cenas e conceitos em suas imagens</p>
+        </header>
 
-    <!-- Container Principal -->
-    <main class="container">
-        <!-- Upload Section -->
-        <section class="upload-section">
-            <!-- Upload form será adicionado aqui -->
-        </section>
+        <main>
+            <!-- Área de Upload -->
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <h2>Arraste sua imagem aqui</h2>
+                        <p>ou clique para selecionar</p>
+                        <p class="file-info">Formatos aceitos: JPG, PNG (máx. 5MB)</p>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/jpeg,image/png" hidden>
+                </div>
+            </section>
 
-        <!-- Results Section -->
-        <section class="results-section">
-            <!-- Results display será adicionado aqui -->
-        </section>
-    </main>
+            <!-- Preview da Imagem -->
+            <section class="preview-section" id="previewSection" style="display: none;">
+                <div class="preview-container">
+                    <img id="imagePreview" src="" alt="Preview da imagem">
+                    <button class="btn-remove" id="removeBtn">✕ Remover Imagem</button>
+                </div>
+            </section>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Footer content será adicionado aqui -->
-    </footer>
+            <!-- Botão de Análise -->
+            <section class="action-section" id="actionSection" style="display: none;">
+                <button class="btn-analyze" id="analyzeBtn">
+                    <span>🔍 Analisar Imagem</span>
+                </button>
+            </section>
+
+            <!-- Loading -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analisando sua imagem...</p>
+            </section>
+
+            <!-- Resultados -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>📊 Resultados da Análise</h2>
+                    <div class="confidence-filter">
+                        <label for="confidenceSlider">Filtrar por confiança: <span id="confidenceValue">0%</span></label>
+                        <input type="range" id="confidenceSlider" min="0" max="100" value="0" step="5">
+                    </div>
+                </div>
+                
+                <div class="labels-container" id="labelsContainer">
+                    <!-- Labels serão inseridos aqui via JavaScript -->
+                </div>
+
+                <button class="btn-new-analysis" id="newAnalysisBtn">
+                    📤 Nova Análise
+                </button>
+            </section>
+
+            <!-- Mensagem de Erro -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-message">
+                    <span class="error-icon">⚠️</span>
+                    <p id="errorText"></p>
+                </div>
+                <button class="btn-retry" id="retryBtn">Tentar Novamente</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido por <a href="https://github.com/felippemcc" target="_blank">Felippe Moura</a></p>
+            <p class="tech-stack">HTML • CSS • JavaScript • Python • Flask • AWS Rekognition</p>
+        </footer>
+    </div>
 
     <script src="app.js"></script>
 </body>

@@ -1,59 +1,453 @@
-/* ==========================================
-   RESET E VARIÁVEIS
-   ========================================== */
 * {
-    /* Reset básico será adicionado aqui */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    /* Variáveis CSS (cores, fontes, etc) serão adicionadas aqui */
+    --primary-color: #FF9900;
+    --secondary-color: #232F3E;
+    --accent-color: #146EB4;
+    --success-color: #4CAF50;
+    --error-color: #f44336;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f5f5f5;
+    --border-color: #ddd;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* ==========================================
-   LAYOUT GERAL
-   ========================================== */
 body {
-    /* Estilos do body serão adicionados aqui */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: var(--text-dark);
 }
 
-/* ==========================================
-   HEADER
-   ========================================== */
-header {
-    /* Estilos do header serão adicionados aqui */
-}
-
-/* ==========================================
-   CONTAINER PRINCIPAL
-   ========================================== */
 .container {
-    /* Estilos do container serão adicionados aqui */
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
-/* ==========================================
-   SEÇÃO DE UPLOAD
-   ========================================== */
+/* Header */
+header {
+    background: var(--secondary-color);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    padding: 40px 30px;
+}
+
+/* Upload Section */
 .upload-section {
-    /* Estilos da seção de upload serão adicionados aqui */
+    margin-bottom: 30px;
 }
 
-/* ==========================================
-   SEÇÃO DE RESULTADOS
-   ========================================== */
+.upload-area {
+    border: 3px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 60px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--bg-light);
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.upload-area.dragover {
+    border-color: var(--accent-color);
+    background: #e3f2fd;
+}
+
+.upload-content {
+    pointer-events: none;
+}
+
+.upload-icon {
+    width: 80px;
+    height: 80px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.upload-area h2 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.upload-area p {
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.file-info {
+    font-size: 0.9em;
+    color: var(--text-light);
+    margin-top: 15px;
+}
+
+/* Preview Section */
+.preview-section {
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+.preview-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+#imagePreview {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    background: #000;
+}
+
+.btn-remove {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(244, 67, 54, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-remove:hover {
+    background: var(--error-color);
+    transform: scale(1.05);
+}
+
+/* Action Section */
+.action-section {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+.btn-analyze {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 16px 48px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.btn-analyze:hover {
+    background: #ec8807;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-analyze:active {
+    transform: translateY(0);
+}
+
+/* Loading Section */
+.loading-section {
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--bg-light);
+    border-top: 6px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-section p {
+    font-size: 1.1em;
+    color: var(--text-light);
+}
+
+/* Results Section */
 .results-section {
-    /* Estilos da seção de resultados serão adicionados aqui */
+    animation: fadeIn 0.5s ease;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
+.results-header {
+    margin-bottom: 30px;
+}
+
+.results-header h2 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.confidence-filter {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.confidence-filter label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#confidenceValue {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#confidenceSlider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    -webkit-appearance: none;
+    background: var(--border-color);
+}
+
+#confidenceSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+#confidenceSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    border: none;
+}
+
+/* Labels Container */
+.labels-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.label-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease;
+}
+
+.label-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.label-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.label-confidence {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.confidence-bar {
+    flex: 1;
+    height: 8px;
+    background: var(--bg-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+    transition: width 0.5s ease;
+}
+
+.confidence-text {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-new-analysis, .btn-retry {
+    display: block;
+    margin: 0 auto;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.btn-new-analysis:hover, .btn-retry:hover {
+    background: #0d5a94;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Error Section */
+.error-section {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.error-message {
+    background: #ffebee;
+    border: 2px solid var(--error-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.error-icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.error-message p {
+    color: var(--error-color);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Footer */
 footer {
-    /* Estilos do footer serão adicionados aqui */
+    background: var(--bg-light);
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
 }
 
-/* ==========================================
-   RESPONSIVIDADE
-   ========================================== */
+footer p {
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.tech-stack {
+    font-size: 0.9em;
+    color: var(--text-light);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    /* Media queries serão adicionadas aqui */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .upload-area {
+        padding: 40px 20px;
+    }
+
+    .upload-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .labels-container {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-analyze {
+        padding: 14px 32px;
+        font-size: 1.1em;
+    }
 }
