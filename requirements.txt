@@ -13,7 +13,7 @@ botocore==1.34.0
 python-dotenv==1.0.0
 
 # Utilitários
-Pillow==10.1.0  # Manipulação de imagens (se necessário)
+Pillow>=12.0.0  # Manipulação de imagens (se necessário)
 
 # Produção (opcional)
 gunicorn==21.2.0  # Para deploy em produção
