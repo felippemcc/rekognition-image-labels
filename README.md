@@ -1,75 +1,107 @@
 # 🖼️ Image Labels Generator - AWS Rekognition
 
-> Aplicação web para análise automática de imagens usando AWS Rekognition
+<div align="center">
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-lightgrey.svg)](https://flask.palletsprojects.com/)
-[![AWS](https://img.shields.io/badge/AWS-Rekognition-orange.svg)](https://aws.amazon.com/rekognition/)
+![AWS Rekognition](https://img.shields.io/badge/AWS-Rekognition-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.0-000000?style=for-the-badge&logo=flask&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-## 📋 Sobre o Projeto
+**Aplicação web para análise automática de imagens usando AWS Rekognition**
 
-Este projeto demonstra a integração com o serviço AWS Rekognition para identificar automaticamente objetos, cenas e conceitos em imagens. A aplicação permite que usuários façam upload de imagens e recebam análises detalhadas com níveis de confiança ajustáveis.
+[Demo Online](#-demo) • [Funcionalidades](#-funcionalidades) • [Instalação](#-instalação) • [Uso](#-como-usar) • [Deploy](#-deploy)
 
-**🎯 Objetivo:** Demonstrar habilidades de integração com serviços AWS, desenvolvimento full-stack e boas práticas de programação.
+---
+
+</div>
+
+## 📖 Sobre o Projeto
+
+Este projeto demonstra a integração com o serviço **AWS Rekognition** para identificar automaticamente objetos, cenas e conceitos em imagens. A aplicação permite que usuários façam upload de imagens e recebam análises detalhadas com níveis de confiança ajustáveis.
+
+### 🎯 Objetivo
+
+Demonstrar habilidades de:
+- ✅ Integração com serviços AWS
+- ✅ Desenvolvimento Full-Stack (Python + JavaScript)
+- ✅ APIs RESTful
+- ✅ Boas práticas de programação
+- ✅ Deploy de aplicações web
+
+---
 
 ## ✨ Funcionalidades
 
-- ✅ Upload de imagens via drag-and-drop ou seleção manual
-- ✅ Suporte para formatos JPG e PNG (até 5MB)
-- ✅ Análise automática com AWS Rekognition
-- ✅ Exibição de labels com barras de confiança
-- ✅ Filtro de confiança ajustável em tempo real
-- ✅ Interface responsiva e moderna
-- ✅ Preview da imagem antes da análise
-- ✅ Tratamento de erros amigável
+- 📤 **Upload de imagens** via drag-and-drop ou seleção manual
+- 🖼️ **Suporte para JPG e PNG** (até 5MB)
+- 🤖 **Análise automática** com AWS Rekognition
+- 📊 **Visualização de labels** com barras de confiança
+- 🎚️ **Filtro de confiança ajustável** em tempo real
+- 📱 **Interface responsiva** e moderna
+- 👁️ **Preview da imagem** antes da análise
+- ⚠️ **Tratamento de erros** amigável
+- 🚀 **Performance otimizada**
 
-## 🚀 Tecnologias
+---
+
+## 🛠️ Tecnologias
 
 ### Frontend
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilização moderna com animações
-- **JavaScript (Vanilla)** - Lógica de interface e integração com API
+| Tecnologia | Descrição |
+|------------|-----------|
+| **HTML5** | Estrutura semântica |
+| **CSS3** | Estilização moderna com animações |
+| **JavaScript** | Lógica de interface e integração |
 
 ### Backend
-- **Python 3.9+** - Linguagem principal
-- **Flask** - Framework web minimalista
-- **Boto3** - SDK oficial da AWS para Python
-- **Flask-CORS** - Habilitação de requisições cross-origin
-- **python-dotenv** - Gerenciamento de variáveis de ambiente
+| Tecnologia | Versão | Descrição |
+|------------|--------|-----------|
+| **Python** | 3.9+ | Linguagem principal |
+| **Flask** | 3.0 | Framework web minimalista |
+| **Boto3** | Latest | SDK oficial da AWS |
+| **Flask-CORS** | Latest | CORS para requisições cross-origin |
+| **python-dotenv** | Latest | Gerenciamento de variáveis de ambiente |
 
 ### Cloud
-- **AWS Rekognition** - Serviço de análise de imagens
-- **AWS IAM** - Gerenciamento de credenciais e permissões
+| Serviço | Descrição |
+|---------|-----------|
+| **AWS Rekognition** | Análise de imagens com IA |
+| **AWS IAM** | Gerenciamento de credenciais |
+
+---
 
 ## 📁 Estrutura do Projeto
 
 ```
 rekognition-image-labels/
-├── frontend/                 # Interface do usuário
-│   ├── index.html           # Estrutura HTML
-│   ├── style.css            # Estilos e animações
-│   └── app.js               # Lógica JavaScript
-├── backend/                 # API Flask
-│   ├── app.py              # Aplicação principal Flask
-│   ├── rekognition_service.py  # Integração com AWS
-│   └── requirements.txt    # Dependências Python
-├── .env.example            # Template de variáveis de ambiente
-├── .gitignore             # Arquivos ignorados pelo Git
-└── README.md              # Documentação
+├── frontend/                  # Interface do usuário
+│   ├── index.html            # Estrutura HTML
+│   ├── style.css             # Estilos e animações
+│   └── app.js                # Lógica JavaScript
+├── backend/                   # API Flask
+│   ├── app.py                # Aplicação principal
+│   ├── rekognition_service.py # Integração AWS
+│   └── requirements.txt       # Dependências Python
+├── .env.example              # Template de variáveis
+├── .gitignore                # Arquivos ignorados
+├── LICENSE                   # Licença MIT
+└── README.md                 # Documentação
 ```
 
-## ⚙️ Configuração
+---
+
+## 🚀 Instalação
 
 ### Pré-requisitos
 
-Antes de começar, você precisa ter instalado:
+Antes de começar, certifique-se de ter:
 
-- [Python 3.9+](https://www.python.org/downloads/)
-- [pip](https://pip.pypa.io/en/stable/installation/) (gerenciador de pacotes Python)
-- [Git](https://git-scm.com/downloads)
-- Uma conta [AWS](https://aws.amazon.com/) ativa
-- [AWS CLI](https://aws.amazon.com/cli/) configurado (opcional, mas recomendado)
+- ✅ [Python 3.9+](https://www.python.org/downloads/)
+- ✅ [pip](https://pip.pypa.io/en/stable/installation/) (gerenciador de pacotes)
+- ✅ [Git](https://git-scm.com/downloads)
+- ✅ Conta [AWS](https://aws.amazon.com/) ativa
+- ✅ [AWS CLI](https://aws.amazon.com/cli/) (opcional)
 
 ### 1️⃣ Clone o Repositório
 
@@ -78,35 +110,39 @@ git clone https://github.com/felippemcc/rekognition-image-labels.git
 cd rekognition-image-labels
 ```
 
-### 2️⃣ Configuração AWS
+### 2️⃣ Configure as Credenciais AWS
 
-#### Criar usuário IAM
+#### Criar Usuário IAM
 
 1. Acesse o [Console AWS IAM](https://console.aws.amazon.com/iam/)
 2. Navegue até **Users** → **Add user**
 3. Nome do usuário: `rekognition-app-user`
 4. Tipo de acesso: **Programmatic access**
 5. Anexe a política: **AmazonRekognitionFullAccess**
-6. **Importante:** Salve as credenciais `Access Key ID` e `Secret Access Key`
+6. **Importante**: Salve as credenciais:
+   - `Access Key ID`
+   - `Secret Access Key`
 
-#### Permissões necessárias
+#### Política Personalizada (Opcional - Mais Seguro)
+
+Para seguir o princípio de menor privilégio:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "rekognition:DetectLabels"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "rekognition:DetectLabels"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
-### 3️⃣ Configuração do Backend
+### 3️⃣ Instalar Dependências do Backend
 
 ```bash
 cd backend
@@ -124,7 +160,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Variáveis de Ambiente
+### 4️⃣ Configurar Variáveis de Ambiente
 
 Crie um arquivo `.env` na pasta `backend/`:
 
@@ -132,7 +168,7 @@ Crie um arquivo `.env` na pasta `backend/`:
 cp .env.example .env
 ```
 
-Edite o arquivo `.env` com suas credenciais:
+Edite o arquivo `.env`:
 
 ```env
 # AWS Credentials
@@ -147,28 +183,20 @@ MAX_IMAGE_SIZE=5242880
 MIN_CONFIDENCE=80
 ```
 
-⚠️ **IMPORTANTE:** Nunca commite o arquivo `.env` no Git!
+⚠️ **IMPORTANTE**: Nunca commite o arquivo `.env` no Git!
 
-### 5️⃣ Instalação Completa
+---
 
-```bash
-# Backend
-cd backend
-pip install -r requirements.txt
+## ▶️ Como Rodar
 
-# Frontend (não requer instalação, apenas um navegador)
-```
-
-## 🎯 Como Usar
-
-### Iniciando o Backend
+### Backend (API Flask)
 
 ```bash
 cd backend
 python app.py
 ```
 
-O servidor estará rodando em: `http://localhost:5000`
+O servidor estará rodando em: **http://localhost:5000**
 
 Você verá:
 ```
@@ -177,41 +205,44 @@ Você verá:
  * Debugger is active!
 ```
 
-### Acessando o Frontend
+### Frontend
 
-**Opção 1: Abrir diretamente no navegador**
+**Opção 1**: Abrir diretamente no navegador
 ```bash
-# Navegue até a pasta frontend e abra o index.html
 cd frontend
-# Depois abra o arquivo index.html no seu navegador
+# Abra o arquivo index.html no seu navegador
 ```
 
-**Opção 2: Usar um servidor HTTP local**
+**Opção 2**: Servidor HTTP local
 ```bash
 cd frontend
 python -m http.server 8000
 ```
-Acesse: `http://localhost:8000`
+Acesse: **http://localhost:8000**
 
-### Usando a Aplicação
+---
 
-1. **Upload da Imagem:**
+## 🎮 Como Usar
+
+1. **Upload da Imagem**
    - Arraste e solte uma imagem na área de upload, OU
    - Clique na área de upload para selecionar um arquivo
 
-2. **Análise:**
+2. **Análise**
    - Clique no botão **"🔍 Analisar Imagem"**
    - Aguarde o processamento (alguns segundos)
 
-3. **Resultados:**
+3. **Resultados**
    - Visualize as labels detectadas com seus níveis de confiança
    - Use o slider para filtrar resultados por confiança mínima
    - Cada label mostra uma barra de progresso indicando a confiança
 
-4. **Nova Análise:**
+4. **Nova Análise**
    - Clique em **"📤 Nova Análise"** para começar novamente
 
-## 🧪 Testando a API
+---
+
+## 🧪 Testes
 
 ### Health Check
 
@@ -222,13 +253,13 @@ curl http://localhost:5000/health
 Resposta esperada:
 ```json
 {
-    "status": "healthy",
-    "service": "Image Labels Generator",
-    "version": "1.0.0"
+  "status": "healthy",
+  "service": "Image Labels Generator",
+  "version": "1.0.0"
 }
 ```
 
-### Analisar Imagem (via curl)
+### Testar Análise de Imagem
 
 ```bash
 # Converter imagem para base64
@@ -240,31 +271,44 @@ curl -X POST http://localhost:5000/api/analyze \
   -d "{\"image\":\"data:image/jpeg;base64,$base64_image\",\"min_confidence\":80}"
 ```
 
-## 🚀 Deploy
+---
+
+## 🌐 Deploy
 
 ### Frontend
 
-#### Opção 1: Netlify
+#### Netlify
 1. Faça login no [Netlify](https://www.netlify.com/)
 2. Arraste a pasta `frontend/` para o dashboard
 3. Pronto! Seu site está no ar
 
-#### Opção 2: Vercel
+#### Vercel
 ```bash
 cd frontend
 npx vercel
 ```
 
-#### Opção 3: GitHub Pages
+#### GitHub Pages
 1. Faça push da pasta `frontend/` para um repositório
-2. Vá em Settings → Pages
+2. Vá em **Settings** → **Pages**
 3. Selecione a branch e a pasta `frontend/`
 
-**⚠️ Lembre-se:** Atualize a URL da API no `app.js` após o deploy do backend!
+⚠️ **Lembre-se**: Atualize a URL da API no `app.js` após o deploy do backend!
 
 ### Backend
 
-#### Opção 1: AWS EC2
+#### Railway (Recomendado - Mais Fácil)
+1. Conecte seu repositório no [Railway](https://railway.app/)
+2. Adicione as variáveis de ambiente
+3. Deploy automático!
+
+#### Render
+1. Crie uma conta no [Render](https://render.com/)
+2. Conecte seu repositório GitHub
+3. Configure as variáveis de ambiente
+4. Deploy!
+
+#### AWS EC2 (Produção)
 ```bash
 # 1. Criar instância EC2
 # 2. Configurar Security Group (porta 5000)
@@ -284,56 +328,30 @@ pip3 install -r requirements.txt
 python3 app.py
 ```
 
-#### Opção 2: Heroku
-```bash
-# 1. Criar Procfile
-echo "web: cd backend && python app.py" > Procfile
+---
 
-# 2. Deploy
-heroku create seu-app-name
-git push heroku main
-
-# 3. Configurar variáveis de ambiente
-heroku config:set AWS_ACCESS_KEY_ID=sua_chave
-heroku config:set AWS_SECRET_ACCESS_KEY=sua_secret
-```
-
-#### Opção 3: Railway
-1. Conecte seu repositório no [Railway](https://railway.app/)
-2. Adicione as variáveis de ambiente
-3. Deploy automático!
-
-## 📊 Formato de Resposta da API
+## 📊 Exemplo de Resposta da API
 
 ```json
 {
-    "success": true,
-    "labels": [
-        {
-            "Name": "Coffee",
-            "Confidence": 99.87654321,
-            "Instances": [],
-            "Parents": [
-                {"Name": "Beverage"},
-                {"Name": "Drink"}
-            ]
-        },
-        {
-            "Name": "Cup",
-            "Confidence": 99.12345678,
-            "Instances": [
-                {
-                    "BoundingBox": {...},
-                    "Confidence": 99.12
-                }
-            ],
-            "Parents": []
-        }
-    ],
-    "label_count": 10,
-    "timestamp": "2024-01-15T10:30:00"
+  "success": true,
+  "labels": [
+    {
+      "name": "Coffee",
+      "confidence": 99.88,
+      "parents": ["Beverage", "Drink"]
+    },
+    {
+      "name": "Cup",
+      "confidence": 99.12,
+      "parents": []
+    }
+  ],
+  "label_count": 10
 }
 ```
+
+---
 
 ## 🔒 Segurança
 
@@ -342,28 +360,35 @@ heroku config:set AWS_SECRET_ACCESS_KEY=sua_secret
 - ✅ Validação de tamanho e tipo de arquivo
 - ✅ CORS configurado adequadamente
 - ✅ Tratamento de erros robusto
+- ✅ Política IAM com menor privilégio possível
+
+---
 
 ## 🐛 Troubleshooting
 
-### Erro: "Failed to fetch"
+### Backend não está respondendo
 - ✅ Verifique se o backend está rodando (`python app.py`)
 - ✅ Confirme se a URL no `app.js` está correta
 - ✅ Verifique se CORS está habilitado
 
-### Erro: "AWS Credentials not found"
+### Erro de credenciais AWS
 - ✅ Verifique se o arquivo `.env` existe
 - ✅ Confirme se as credenciais estão corretas
 - ✅ Teste com `aws configure` no terminal
 
-### Erro: "Image too large"
+### Imagem muito grande
 - ✅ A imagem deve ter no máximo 5MB
 - ✅ Comprima a imagem antes do upload
 
-### Labels não aparecem
+### Nenhum resultado aparece
 - ✅ Ajuste o slider de confiança para 0%
 - ✅ Tente com imagens diferentes e de boa qualidade
 
-## 📈 Melhorias Futuras
+---
+
+## 🎯 Roadmap
+
+Funcionalidades planejadas:
 
 - [ ] Suporte para múltiplas imagens
 - [ ] Histórico de análises
@@ -373,7 +398,9 @@ heroku config:set AWS_SECRET_ACCESS_KEY=sua_secret
 - [ ] Detecção de texto em imagens (OCR)
 - [ ] Modo escuro na interface
 - [ ] Comparação entre imagens
-- [ ] API REST completa com documentação Swagger
+- [ ] Documentação Swagger da API
+
+---
 
 ## 🤝 Contribuindo
 
@@ -385,9 +412,13 @@ Contribuições são bem-vindas! Este é um projeto de portfólio, mas sugestõe
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
+---
+
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
 
 ## 👤 Autor
 
@@ -399,24 +430,19 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-## 🔗 Links Úteis
+## 📚 Recursos Úteis
 
-- [Documentação AWS Rekognition](https://docs.aws.amazon.com/rekognition/)
+- [AWS Rekognition Documentation](https://docs.aws.amazon.com/rekognition/)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [Boto3 Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 - [AWS Free Tier](https://aws.amazon.com/free/)
 
-## 📸 Screenshots
-
-### Interface Principal
-<img src="assets/images/capa.png" alt="Interface de Upload" width="500"/>
-
-### Resultados da Análise
-<img src="assets/images/cafe_teste.png" alt="Resultados" width="500"/>
-
-
 ---
 
-⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
+<div align="center">
 
-**Desenvolvido com ❤️ e ☕ por Felippe Moura**
+### ⭐ Se este projeto foi útil para você, considere dar uma estrela!
+
+**Desenvolvido com ❤️ e ☕ por [Felippe Moura](https://github.com/felippemcc)**
+
+</div>
