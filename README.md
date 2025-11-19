@@ -10,11 +10,23 @@
 
 **Aplicação web para análise automática de imagens usando AWS Rekognition**
 
-[Demo Online](#-demo) • [Funcionalidades](#-funcionalidades) • [Instalação](#-instalação) • [Uso](#-como-usar) • [Deploy](#-deploy)
+### 🌐 [**Ver Demo Online**](https://rekognition-img.netlify.app/) 🌐
+
+[Demo](#-demo) • [Funcionalidades](#-funcionalidades) • [Instalação](#-instalação) • [Uso](#-como-usar) • [Deploy](#-deploy)
 
 ---
 
 </div>
+
+## 🌐 Demo
+
+🎉 **Aplicação rodando online**: [https://rekognition-img.netlify.app/](https://rekognition-img.netlify.app/)
+
+**Experimente agora mesmo!** Faça upload de uma imagem e veja a mágica da IA acontecer.
+
+> **Nota**: O backend pode levar alguns segundos para iniciar na primeira requisição (cold start).
+
+---
 
 ## 📖 Sobre o Projeto
 
