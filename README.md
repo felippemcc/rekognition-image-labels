@@ -395,7 +395,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - 🌐 GitHub: [@felippemcc](https://github.com/felippemcc)
 - 💼 LinkedIn: [Felippe Moura](https://www.linkedin.com/in/felippemoura/)
-- 📧 Email: [felippe.mcc1@gmail.com]
+- 📧 Email: felippe.mcc1@gmail.com
 
 ---
 
@@ -409,10 +409,11 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📸 Screenshots
 
 ### Interface Principal
-![Interface de Upload](assets/images/capa.png)
+<img src="assets/images/capa.png" alt="Interface de Upload" width="500"/>
 
 ### Resultados da Análise
-![Resultados](assets/images/cafe_teste.png)
+<img src="assets/images/cafe_teste.png" alt="Resultados" width="500"/>
+
 
 ---
 
