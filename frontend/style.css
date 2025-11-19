@@ -1,0 +1,59 @@
+/* ==========================================
+   RESET E VARIÁVEIS
+   ========================================== */
+* {
+    /* Reset básico será adicionado aqui */
+}
+
+:root {
+    /* Variáveis CSS (cores, fontes, etc) serão adicionadas aqui */
+}
+
+/* ==========================================
+   LAYOUT GERAL
+   ========================================== */
+body {
+    /* Estilos do body serão adicionados aqui */
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+header {
+    /* Estilos do header serão adicionados aqui */
+}
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+.container {
+    /* Estilos do container serão adicionados aqui */
+}
+
+/* ==========================================
+   SEÇÃO DE UPLOAD
+   ========================================== */
+.upload-section {
+    /* Estilos da seção de upload serão adicionados aqui */
+}
+
+/* ==========================================
+   SEÇÃO DE RESULTADOS
+   ========================================== */
+.results-section {
+    /* Estilos da seção de resultados serão adicionados aqui */
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    /* Estilos do footer serão adicionados aqui */
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+@media (max-width: 768px) {
+    /* Media queries serão adicionadas aqui */
+}
