@@ -103,6 +103,47 @@ rekognition-image-labels/
 
 ---
 
+## 🏗️ Diagrama de Arquitetura
+```mermaid
+graph TB
+    subgraph "Cliente"
+        User[👤 Usuário]
+    end
+
+    subgraph "Frontend - Netlify"
+        WebApp[🌐 Web Application<br/>HTML + CSS + JS]
+    end
+
+    subgraph "Backend - Railway"
+        Flask[⚙️ Flask API<br/>Python]
+        Boto3[📦 Boto3 SDK]
+    end
+
+    subgraph "AWS Cloud"
+        IAM[🔐 IAM<br/>Credenciais]
+        Rekognition[🤖 AWS Rekognition<br/>Análise de Imagens]
+    end
+
+    User -->|1. Acessa| WebApp
+    User -->|2. Upload Imagem| WebApp
+    WebApp -->|3. POST /api/analyze<br/>Base64 Image| Flask
+    Flask -->|4. Autentica| IAM
+    Flask -->|5. detect_labels| Boto3
+    Boto3 -->|6. API Call| Rekognition
+    Rekognition -->|7. Labels + Confidence| Boto3
+    Boto3 -->|8. Response| Flask
+    Flask -->|9. JSON Response| WebApp
+    WebApp -->|10. Exibe Resultados| User
+
+    style User fill:#4A90E2
+    style WebApp fill:#FF9900
+    style Flask fill:#232F3E
+    style Rekognition fill:#FF9900
+    style IAM fill:#DD344C
+```
+---
+
+
 ## 🚀 Instalação
 
 ### Pré-requisitos
